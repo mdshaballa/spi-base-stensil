@@ -13,9 +13,6 @@ import '@stencil/state-tunnel';
 
 export namespace Components {
 
-  interface SpiBof {}
-  interface SpiBofAttributes extends StencilHTMLAttributes {}
-
   interface SpiHeader {}
   interface SpiHeaderAttributes extends StencilHTMLAttributes {}
 
@@ -28,25 +25,17 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
-    'SpiBof': Components.SpiBof;
     'SpiHeader': Components.SpiHeader;
     'SpiHome': Components.SpiHome;
     'SpiRoot': Components.SpiRoot;
   }
 
   interface StencilIntrinsicElements {
-    'spi-bof': Components.SpiBofAttributes;
     'spi-header': Components.SpiHeaderAttributes;
     'spi-home': Components.SpiHomeAttributes;
     'spi-root': Components.SpiRootAttributes;
   }
 
-
-  interface HTMLSpiBofElement extends Components.SpiBof, HTMLStencilElement {}
-  var HTMLSpiBofElement: {
-    prototype: HTMLSpiBofElement;
-    new (): HTMLSpiBofElement;
-  };
 
   interface HTMLSpiHeaderElement extends Components.SpiHeader, HTMLStencilElement {}
   var HTMLSpiHeaderElement: {
@@ -67,14 +56,12 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
-    'spi-bof': HTMLSpiBofElement
     'spi-header': HTMLSpiHeaderElement
     'spi-home': HTMLSpiHomeElement
     'spi-root': HTMLSpiRootElement
   }
 
   interface ElementTagNameMap {
-    'spi-bof': HTMLSpiBofElement;
     'spi-header': HTMLSpiHeaderElement;
     'spi-home': HTMLSpiHomeElement;
     'spi-root': HTMLSpiRootElement;

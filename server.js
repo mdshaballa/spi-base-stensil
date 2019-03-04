@@ -6,6 +6,6 @@ let app = express();
 app.use(serveStatic('www', {'index': ['index.html', 'index.htm']}));
 
 //app.listen(8080);
-app.listen(process.env.PORT, '0.0.0.0');
+app.listen("8080", '127.0.0.1');
 
-console.log('Server started on 0.0.0.0:' + process.env.PORT);
+//console.log('Server started on 127.0.0.1:' + process.env.PORT);
