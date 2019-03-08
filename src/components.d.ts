@@ -9,15 +9,50 @@ import '@stencil/core';
 
 import '@stencil/router';
 import '@stencil/state-tunnel';
+import {
+  MatchResults,
+  RouterHistory,
+} from '@stencil/router';
 
 
 export namespace Components {
 
+  interface SpiCandidat {}
+  interface SpiCandidatAttributes extends StencilHTMLAttributes {}
+
+  interface EnsAjouter {
+    'home': RouterHistory;
+  }
+  interface EnsAjouterAttributes extends StencilHTMLAttributes {
+    'home'?: RouterHistory;
+  }
+
+  interface EnsDetail {
+    'match': MatchResults;
+  }
+  interface EnsDetailAttributes extends StencilHTMLAttributes {
+    'match'?: MatchResults;
+  }
+
+  interface EnsRechercher {
+    'match': MatchResults;
+  }
+  interface EnsRechercherAttributes extends StencilHTMLAttributes {
+    'match'?: MatchResults;
+  }
+
+  interface EnsSupprimer {
+    'match': MatchResults;
+  }
+  interface EnsSupprimerAttributes extends StencilHTMLAttributes {
+    'match'?: MatchResults;
+  }
+
+  interface SpiEnseignant {}
+  interface SpiEnseignantAttributes extends StencilHTMLAttributes {}
+
   interface SpiHeader {}
   interface SpiHeaderAttributes extends StencilHTMLAttributes {}
-
-  interface SpiHome {}
-  interface SpiHomeAttributes extends StencilHTMLAttributes {}
 
   interface SpiRoot {}
   interface SpiRootAttributes extends StencilHTMLAttributes {}
@@ -25,28 +60,68 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'SpiCandidat': Components.SpiCandidat;
+    'EnsAjouter': Components.EnsAjouter;
+    'EnsDetail': Components.EnsDetail;
+    'EnsRechercher': Components.EnsRechercher;
+    'EnsSupprimer': Components.EnsSupprimer;
+    'SpiEnseignant': Components.SpiEnseignant;
     'SpiHeader': Components.SpiHeader;
-    'SpiHome': Components.SpiHome;
     'SpiRoot': Components.SpiRoot;
   }
 
   interface StencilIntrinsicElements {
+    'spi-candidat': Components.SpiCandidatAttributes;
+    'ens-ajouter': Components.EnsAjouterAttributes;
+    'ens-detail': Components.EnsDetailAttributes;
+    'ens-rechercher': Components.EnsRechercherAttributes;
+    'ens-supprimer': Components.EnsSupprimerAttributes;
+    'spi-enseignant': Components.SpiEnseignantAttributes;
     'spi-header': Components.SpiHeaderAttributes;
-    'spi-home': Components.SpiHomeAttributes;
     'spi-root': Components.SpiRootAttributes;
   }
 
+
+  interface HTMLSpiCandidatElement extends Components.SpiCandidat, HTMLStencilElement {}
+  var HTMLSpiCandidatElement: {
+    prototype: HTMLSpiCandidatElement;
+    new (): HTMLSpiCandidatElement;
+  };
+
+  interface HTMLEnsAjouterElement extends Components.EnsAjouter, HTMLStencilElement {}
+  var HTMLEnsAjouterElement: {
+    prototype: HTMLEnsAjouterElement;
+    new (): HTMLEnsAjouterElement;
+  };
+
+  interface HTMLEnsDetailElement extends Components.EnsDetail, HTMLStencilElement {}
+  var HTMLEnsDetailElement: {
+    prototype: HTMLEnsDetailElement;
+    new (): HTMLEnsDetailElement;
+  };
+
+  interface HTMLEnsRechercherElement extends Components.EnsRechercher, HTMLStencilElement {}
+  var HTMLEnsRechercherElement: {
+    prototype: HTMLEnsRechercherElement;
+    new (): HTMLEnsRechercherElement;
+  };
+
+  interface HTMLEnsSupprimerElement extends Components.EnsSupprimer, HTMLStencilElement {}
+  var HTMLEnsSupprimerElement: {
+    prototype: HTMLEnsSupprimerElement;
+    new (): HTMLEnsSupprimerElement;
+  };
+
+  interface HTMLSpiEnseignantElement extends Components.SpiEnseignant, HTMLStencilElement {}
+  var HTMLSpiEnseignantElement: {
+    prototype: HTMLSpiEnseignantElement;
+    new (): HTMLSpiEnseignantElement;
+  };
 
   interface HTMLSpiHeaderElement extends Components.SpiHeader, HTMLStencilElement {}
   var HTMLSpiHeaderElement: {
     prototype: HTMLSpiHeaderElement;
     new (): HTMLSpiHeaderElement;
-  };
-
-  interface HTMLSpiHomeElement extends Components.SpiHome, HTMLStencilElement {}
-  var HTMLSpiHomeElement: {
-    prototype: HTMLSpiHomeElement;
-    new (): HTMLSpiHomeElement;
   };
 
   interface HTMLSpiRootElement extends Components.SpiRoot, HTMLStencilElement {}
@@ -56,14 +131,24 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'spi-candidat': HTMLSpiCandidatElement
+    'ens-ajouter': HTMLEnsAjouterElement
+    'ens-detail': HTMLEnsDetailElement
+    'ens-rechercher': HTMLEnsRechercherElement
+    'ens-supprimer': HTMLEnsSupprimerElement
+    'spi-enseignant': HTMLSpiEnseignantElement
     'spi-header': HTMLSpiHeaderElement
-    'spi-home': HTMLSpiHomeElement
     'spi-root': HTMLSpiRootElement
   }
 
   interface ElementTagNameMap {
+    'spi-candidat': HTMLSpiCandidatElement;
+    'ens-ajouter': HTMLEnsAjouterElement;
+    'ens-detail': HTMLEnsDetailElement;
+    'ens-rechercher': HTMLEnsRechercherElement;
+    'ens-supprimer': HTMLEnsSupprimerElement;
+    'spi-enseignant': HTMLSpiEnseignantElement;
     'spi-header': HTMLSpiHeaderElement;
-    'spi-home': HTMLSpiHomeElement;
     'spi-root': HTMLSpiRootElement;
   }
 

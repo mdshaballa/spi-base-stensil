@@ -1,0 +1,23 @@
+@import "../../../node_modules/bulma/sass/elements/title.sass";
+@import"../../../node_modules/bulma/sass/elements/table.sass";
+@import"../../../node_modules/bulma/sass/grid/columns.sass";
+@import"../../../node_modules/bulma/sass/layout/section.sass";
+@import"../../../node_modules/bulma-extensions/bulma-tooltip/dist/css/bulma-tooltip.sass";
+@import"../../../node_modules/bulma/sass/components/message.sass";
+@import"../../../node_modules/bulma-extensions/bulma-pricingtable/dist/css/bulma-pricingtable.sass";
+@import"../../../node_modules/bulma-extensions/dist/css/bulma-extensions.min.css";
+@import"../../../node_modules/bulma/sass/elements/form.sass";
+.columns{
+
+    margin-top: 100px
+}
+
+.input{
+        margin-top: 2cm;
+     
+}
+
+.button{
+    margin-top: 0.5cm;
+    margin-left: 40%;
+}

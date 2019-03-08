@@ -1,22 +1,28 @@
+
 @import "../../../node_modules/bulma/sass/components/navbar.sass";
 @import "../../../node_modules/bulma/sass/elements/button.sass";
 
 .navbar-brand .navbar-item {
-    font-size: 3.8em;
+    font-size: 1em;
 }
 
 .navbar-menu .navbar-item {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .navbar-menu .navbar-item svg  {
-    margin-right: .25em;
+    margin-right: 1em;
     margin-left: 1em;
 }
 
 .navbar a {
-    color: inherit; /* blue colors for links too */
+    color: black; /* blue colors for links too */
+    margin-top: 0.1cm;
   }
 .navbar a:hover {
-    color: $link;
+    color: black;
+}
+.navbar{
+    background-color:#F8F8FF ;
+    height: 1.5cm;
 }
